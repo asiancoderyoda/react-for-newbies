@@ -8,8 +8,12 @@ The important features of React are:
 
 -   It supports server-side rendering.
 -   It will make use of the virtual DOM rather than real DOM (Data Object Model) as RealDOM manipulations are expensive.
--   It follows unidirectional data binding or data flow.
+-   It follows unidirectional/one-way data binding or data flow.
 -   It uses reusable or composable UI components for developing the view.
+
+Webpack is a static module bundler for JavaScript applications. When Webpack processes your application, it builds a dependency graph which maps out the modules that your project needs and generates one or more bundles. It can handle not only combination and minification of JavaScript and CSS files, but also other assets such as image files (spriting) through the use of plugins.
+
+Babel is a transpiler i.e. it converts the JSX to vanilla JavaScript. You can view babel as an intermediate step between your code and "executable" code. React also uses ES6, which is not supported by most of the browsers. Babel converts the ES6 code to a code which is compatible with the browsers mostly ES5.
 
 ### 2. What are the advantages of using React?
 
@@ -70,7 +74,7 @@ The various lifecycle methods are:
 
 -  `componentWillMount()`: Deprecated, Move logic to `constructor` or `componentDidMount()`
 -  `constructor()`: This method will be called when the component is initiated before anything has been done. It helps to set up the initial state and initial values.
--   `getDerivedStateFromProps()`: This method will be called just before element(s) rendering in the DOM. It helps to set up the state object depending on the initial props. The getDerivedStateFromProps() method will have a state as an argument and it returns an object that made changes to the state. This will be the first method to be called on an updating of a component.
+-  `static getDerivedStateFromProps()`: This method will be called just before element(s) rendering in the DOM. It helps to set up the state object depending on the initial props. The getDerivedStateFromProps() method will have a state as an argument and it returns an object that made changes to the state. This will be the first method to be called on an updating of a component.
 -   `render()`: This method will output or re-render the HTML to the DOM with new changes. The render() method is an essential method and will be called always while the remaining methods are optional and will be called only if they are defined.
 -   `componentDidMount()`: This method will be called after the rendering of the component. Using this method, you can run statements that need the component to be already kept in the DOM.
 -   `shouldComponentUpdate()`: The Boolean value will be returned by this method which will specify whether React should proceed further with the rendering or not. The default value for this method will be True.

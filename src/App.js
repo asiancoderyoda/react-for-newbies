@@ -1,11 +1,13 @@
 import FunctionalComp from "./modules/functionalComp/FunctionalComp";
 import ClassCompCounter from "./modules/classComp/ClassComp";
+import { ParentClass } from "./modules/classComp/Parent";
 function App() {
   return (
     <div className="App">
-      <FunctionalComp/>
+      {/* <FunctionalComp/> */}
       <hr/>
-      {/* <ClassCompCounter/> */}
+      <ClassCompCounter/>
+      {/* <ParentClass/> */}
     </div>
   );
 }

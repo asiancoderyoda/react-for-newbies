@@ -70,7 +70,7 @@ export default class ClassLifeCycles extends Component {
     getSnapshotBeforeUpdate(prevProps, prevState) {
         console.log("Get Snapshot Before Update")
         console.log("------------------------------------------")
-        return prevProps
+        return prevState
     }
 
     /*
